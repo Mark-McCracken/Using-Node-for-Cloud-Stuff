@@ -5,7 +5,7 @@ One of the most daunting things about starting a new language or project is unde
 
 ### Javascript and Node
 
-Different Browsers have slightly different javascript engines. For more info on versions, see [javascript versions](../general-javascript-concepts/javascript-versions.md).
+Different Browsers have slightly different javascript engines. For more info on versions, see [javascript versions](../General%20Javascript%20Concepts/javascript-versions.md).
 
 Node (or node.js) is a Javascript Runtime that executes the Chrome Browser's V8 engine, but can run outside the browser (ie. on a server).
 This capability of running outside the browser means it can do things your browser can't, like accessing the local file system. (Browsers cannot do this for obvious security reasons).

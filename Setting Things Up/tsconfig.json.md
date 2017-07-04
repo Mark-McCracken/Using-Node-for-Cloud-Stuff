@@ -35,7 +35,7 @@ Set this to the location you want your files to be compiled to. I normally use d
 
 #### lib: ["es2016", "es2017"]
 
-This enables features from es2016 and es2017 versions of javascript when compiling. If you use a new feature that your compilation target (es2015 in this case) does not have, typescript will magically polyfill* them for you. [See Javascript versions](../general-javascript-concepts/javascript-versions.md) for more info.
+This enables features from es2016 and es2017 versions of javascript when compiling. If you use a new feature that your compilation target (es2015 in this case) does not have, typescript will magically polyfill* them for you. [See Javascript versions](../General%20Javascript%20Concepts/javascript-versions.md) for more info.
 
 *(make a large function that works in place of the new version but does the same thing)
 
