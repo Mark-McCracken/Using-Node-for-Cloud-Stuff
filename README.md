@@ -10,7 +10,7 @@ A lot of the repositories I made recently involved large chunks of copying somet
 
 Finding that example is not always straightforward, so I want to collect every example of everything you might want to do with Node, explain the entire setup, and help people pick this up as quickly as possible, should they want to.
 
-Any feedback is very much appreciated.
+Any feedback is very much appreciated. If there's something you want adding, say so.
 
 Let me know if you want help with any problems in particular, I will be more than happy to help.
 

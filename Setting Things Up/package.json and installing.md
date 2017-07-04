@@ -74,7 +74,7 @@ If using npm version 5+ (comes with node version 8+), this file will be auto gen
 
 ### Scripts
 
-This section contains scripts you might want to commonly run.
+This section contains scripts you might want to commonly run. It's common practive to have your project run under the command `npm start`, so add whatever is needed to that script to make your project run. For me, that's normally `node dist/compiled-file-name.js`
 
 npm can be used as a task runner for your project, to run tests, or start the project.
 
