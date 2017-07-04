@@ -167,3 +167,6 @@ But also:
   
   This is pretty neat.
   It will print out to the console `A`, then the relevant error/success message sometime later, then pickup where it left off and log `B`;
+  
+Promises and Generators & Iterators are new to ES6/ES2015.
+Async await is (currently) a stage 4 proposal (Will become a feature of the language). We can use it in typescript.
