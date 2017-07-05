@@ -40,5 +40,29 @@ See details in the [tsconfig.json](./tsconfig.json.md) section.
 
 <hr>
 
-Virtually all projects you'll want to make will need a [package.json](package.json and installing.md) and a [tsconfig.json](./tsconfig.json.md), so be sure to check those out.
+Virtually all projects you'll want to make will need a [package.json](./package.json%20and%20installing.md) and a [tsconfig.json](./tsconfig.json.md), so be sure to check those out.
 
+### Environment Variables
+This is a concept made fairly straightforward by the package dotenv
+
+run `npm install dotenv` (make sure you've set up your package.json first)
+
+create a file in your root directory called `.env`
+
+Put the contents into it
+
+```yaml
+DB2_USER=myusername
+DB2_PW=paSsw0rD
+GCLOUD_PROJECT=mygooglecloudproject
+```
+
+as early as possible in your script, add the line
+```javascript
+require("dotenv").config();
+```
+You can now access these variables using
+```javascript
+process.env.DB2_USER
+```
+or whatever you named them
