@@ -84,7 +84,6 @@ But also:
 - [async/await](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch8.md)
   - The latest and greatest. By far the best syntax, as this makes asynchronous code, but the code patterns look like synchronous code.
   Consider the following 3 pieces of code:
-  
   ```javascript
   function makeDirectorySynchronously(directoryPath) {
     // do some stuff that synchronously does something, blocking other things from happening.
@@ -104,12 +103,10 @@ But also:
 
   doSomethingWithFile();
   ```
-  
   This will log to the console `A`, then make the directorySynchronously, however long that takes, **THEN** log B to the console.
   Sort of what you'd expect.
   
   Now this:
-  
   ```javascript
   function makeDirectoryAsynchronously(someFilePath, callback) {
     // do this asynchronously.
@@ -133,12 +130,10 @@ But also:
 
   doSomethingWithFile();
   ```
-  
   Will instead log to the console `A`, then log to the console `B`, then at some point either error or have made the directory.
   This is out of order of what actually appears in the code.
   
   Lastly:
-  
   ```javascript
   function makeDirectoryAsynchronously(someFilePath) {
       return new Promise((resolve, reject) => {
@@ -166,7 +161,6 @@ But also:
     // we can wait on this function to complete in order to do something else once it has finished,
     // as by default, any function marked async will return a promise.
   ```
-  
   This combines the best of both worlds. We can do something asynchronously,
   but still make it look like a synchronous function, in that it reads from top to bottom.
   Under the hood, this uses a combination of promises and generators/iterators, but the pattern essentially means that the function doSomethingWithFile **stops executing and waits for makeDirectoryAsynchronously to have finished**.

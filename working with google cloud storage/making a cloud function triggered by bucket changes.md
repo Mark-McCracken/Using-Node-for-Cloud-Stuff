@@ -78,22 +78,3 @@ function doSomethingAsynchronousWithFile(fileName: string) {
 ```
 
 Don't pass anything to the callback unless you want it to be considered as an error. It will be logged as such.
-
-And that's the majority of it.
-
-To deploy a function, you need to take all the files inside your `/dist` directory,
-and zip them into a .zip file.
-
-Then go to [console.cloud.google.com](https://console.cloud.google.com/) and go to cloud functions.
-
-Create a function, give it your desired memory, and time to complete
-
-Set the trigger to be cloud storage bucket
-
-Source code is your zip file, so upload it. Pick a stage bucket (This can be a subfolder in a GCS bucket).
-
-Function to execute in this case is `cloudFunction`, the actual function that will be called, accepting the callback parameter.
-
-Hit create, give it a minute to install whatever you demanded in you package.json and get ready*. Then it should be good to go. You can see any logging you've done in the cloud console.
-
-*behind the scenes it's using docker to create an image, so should be a roughly equivalent time to the first time you ever try to download node on docker + npm installing your packages.
