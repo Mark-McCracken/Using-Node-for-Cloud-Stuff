@@ -157,3 +157,24 @@ mySQLconn.query(`show columns from ${tables.mysql}`, (err, results) => {
     });
 });
 ```
+
+# WARNING!
+
+Using this method to load data into a table is not particularly common, and for good reason. This will ignore any data types, and ram the data in regardless of table constrains or warnings.
+
+If you have a primary key or a varchar or a timestamp, prepare for it to be utterly pointless if you insert something unexpected.
+
+You will NOT receive warnings about this.
+
+Consider if this is best method for inserting your data. But if it is...
+
+### Make it really fast.
+
+This is already pretty snappy, but we can turbo boost it using a few tricks.
+- Make your table use MyISAM storage engine instead of InnoDB. This is faster for inserts.
+- Got an index? Drop the index first, then recreate it after. Don't care about where the data is inserted until it's all in there.
+- Boost the allowable ram on the MySQL instance to approximately 25% of the maximum for a given query. It can process it faster.
+- Or if you know nothing else will be happening at that time on that database, you could get closer to 50%,
+but any higher and your database might grind to a halt as it needs that memory for essential stuff.
+
+This can result in 20x speed increases compared to using insert statements. (Obviously depending heavily on the data being inserted and other factors).
